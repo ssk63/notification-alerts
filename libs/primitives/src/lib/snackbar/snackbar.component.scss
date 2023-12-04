@@ -1,0 +1,42 @@
+.snackbar {
+  display: flex;
+  z-index: 9999;
+  justify-content: space-between;
+  align-items: center;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .message {
+    margin: 0;
+  }
+
+  .close-action {
+    background: transparent;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.snackbar-success {
+  --mdc-snackbar-container-color: #008000;
+  --mdc-snackbar-supporting-text-color: white;
+  --mat-mdc-snack-bar-button-color: white;
+}
+
+.snackbar-warning {
+  --mdc-snackbar-container-color: #e1bc29;
+  --mdc-snackbar-supporting-text-color: white;
+  --mat-mdc-snack-bar-button-color: white;
+}
+
+.snackbar-error {
+  --mdc-snackbar-container-color: #ff0000;
+  --mdc-snackbar-supporting-text-color: white;
+  --mat-mdc-snack-bar-button-color: white;
+}

@@ -1,0 +1,13 @@
+:host {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 400px;
+  min-height: 38px;
+  padding: 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: gap 0.3s linear;
+}

@@ -1,0 +1,15 @@
+<div class="toast toast-{{ toast.type }} toast-position-{{ toast.position }}">
+  <div class="content">
+    <h4 *ngIf="toast.title" class="title">{{ toast.title }}</h4>
+
+    <p
+      *ngIf="toast.description"
+      class="description"
+      [innerHTML]="toast.description"
+    ></p>
+  </div>
+
+  <button (click)="remove.emit(index)" class="close-button">
+    {{ toast.actionLabel || 'CLOSE' }}
+  </button>
+</div>

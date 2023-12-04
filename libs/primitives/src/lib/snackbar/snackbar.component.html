@@ -1,0 +1,15 @@
+<div class="snackbar">
+  <div class="content">
+    <mat-icon *ngIf="icon" aria-hidden="false" [fontIcon]="icon"></mat-icon>
+
+    <p class="message">{{ message }}</p>
+  </div>
+
+  <button
+    *ngIf="action"
+    class="close-action"
+    (click)="snackBarRef.dismissWithAction()"
+  >
+    {{ action }}
+  </button>
+</div>

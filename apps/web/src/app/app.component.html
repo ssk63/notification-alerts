@@ -1,1 +1,44 @@
-<d8-nx-welcome></d8-nx-welcome> <router-outlet></router-outlet>
+<div class="container">
+  <div class="material-snackbar">
+    <h1>
+      <a
+        href="https://material.angular.io/components/snack-bar/overview"
+        target="_blank"
+        >Angular Material Snackbar</a
+      >
+    </h1>
+    <p>Only one snackbar is displayed at a time.</p>
+
+    <div class="btn-group">
+      <button mat-raised-button (click)="showSuccessSnackbar()">Success</button>
+      <button mat-raised-button (click)="showErrorSnackbar()">Error</button>
+      <button mat-raised-button (click)="showWarningSnackbar()">Warning</button>
+    </div>
+  </div>
+
+  <div class="custom-toast">
+    <h1>
+      <a href="https://www.npmjs.com/package/ngx-toastr" target="_blank"
+        >ngx-toastr</a
+      >
+    </h1>
+
+    <div class="btn-group">
+      <button mat-raised-button (click)="showSuccess()">Success</button>
+      <button mat-raised-button (click)="showError()">Error</button>
+      <button mat-raised-button (click)="showWarning()">Warning</button>
+    </div>
+  </div>
+
+  <div class="custom-toast">
+    <h1>Custom Toast</h1>
+
+    <div class="btn-group">
+      <button mat-raised-button (click)="showSuccessToast()">Success</button>
+      <button mat-raised-button (click)="showErrorToast()">Error</button>
+      <button mat-raised-button (click)="showWarningToast()">Warning</button>
+    </div>
+  </div>
+</div>
+
+<d8-toast-container></d8-toast-container>

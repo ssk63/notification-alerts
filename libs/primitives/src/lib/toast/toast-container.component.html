@@ -1,0 +1,13 @@
+<div
+  *ngFor="let toast of toasts; let i = index"
+  @verticalCollapse
+  @triggerChildAnimation
+>
+  <d8-toast
+    [toast]="toast"
+    [index]="i"
+    (remove)="remove($event)"
+    @slideIn
+    @slideOut
+  ></d8-toast>
+</div>

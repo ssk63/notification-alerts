@@ -1,0 +1,48 @@
+<div class="toastr" [style.display]="state.value === 'inactive' ? 'none' : ''">
+  <div class="content">
+    <div
+      *ngIf="title"
+      class="title"
+      [class]="options.titleClass"
+      [attr.aria-label]="title"
+    >
+      {{ title }}
+    </div>
+
+    <div
+      *ngIf="message && options.enableHtml"
+      role="alert"
+      [class]="options.messageClass"
+      [innerHTML]="message"
+      class="message"
+    ></div>
+
+    <div
+      *ngIf="message && !options.enableHtml"
+      role="alert"
+      [class]="options.messageClass"
+      [attr.aria-label]="message"
+      class="message"
+    >
+      {{ message }}
+    </div>
+  </div>
+
+  <div class="action-wrapper">
+    <a
+      *ngIf="!options.closeButton"
+      class="custom-action"
+      (click)="action($event)"
+    >
+      {{ undoString }}
+    </a>
+
+    <a *ngIf="options.closeButton" (click)="remove()" class="close-action">
+      close
+    </a>
+  </div>
+</div>
+
+<div *ngIf="options.progressBar">
+  <div class="toast-progress" [style.width]="width + '%'"></div>
+</div>
